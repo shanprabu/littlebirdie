@@ -12,6 +12,8 @@ Update the environment variable `QUEUE_CONNECTION=database` since we will be usi
 
 The `injestuser` artisan command is scheduled to run hourly. This needs to be added to the cron with the following command
 
+`crontab -e`
+
 `* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`
 
 The `injestusers` command can be run from the command prompt if it needs to be run manually.
